@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, MapPin, Send, MessageSquare, CheckCircle, AlertCircle, Loader2, Link as LinkIcon, CheckCircle2 } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, MessageSquare, CheckCircle, AlertCircle, Loader2, Link as LinkIcon, CheckCircle2 } from 'lucide-react';
 import { LinkedinIcon } from '../ui/Icons';
 import siteConfig from '../../data/site-config.json';
 import styles from '../../styles/contact.module.css';
@@ -21,7 +21,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: 'Data Science / ML Role',
+    subject: 'Data Analytics / Engineering Role',
     message: ''
   });
 
@@ -39,7 +39,7 @@ export default function Contact() {
       return;
     }
 
-    setStatus({ state: 'loading', message: 'Transmitting message to the observatory...' });
+    setStatus({ state: 'loading', message: 'Sending your message...' });
 
     try {
       const res = await fetch('/api/contact', {
@@ -58,12 +58,12 @@ export default function Contact() {
       if (res.ok && result.success) {
         setStatus({
           state: 'success',
-          message: 'Thank you! Your message was received. Souhrid will respond promptly.'
+          message: 'Thank you! Your message was received. Camilo will respond promptly.'
         });
         setFormData({
           name: '',
           email: '',
-          subject: 'Data Science / ML Role',
+          subject: 'Data Analytics / Engineering Role',
           message: ''
         });
       } else {
@@ -72,7 +72,7 @@ export default function Contact() {
     } catch (err) {
       setStatus({
         state: 'error',
-        message: 'Could not submit online. Please email directly at dsouhrid@gmail.com'
+        message: `Could not submit online. Please email directly at ${siteConfig.email}.`
       });
     }
   };
@@ -88,7 +88,7 @@ export default function Contact() {
             </div>
             <h2 className="sectionTitle">Establish Contact</h2>
             <p className="sectionSubtitle">
-              Open to strategic data science roles, consulting engagements, or collaborative research.
+              Open to opportunities in data analytics, investment analytics, and data engineering.
             </p>
           </div>
         </FadeIn>
@@ -100,8 +100,8 @@ export default function Contact() {
               <div style={{ marginBottom: '1.5rem', position: 'relative', zIndex: 10 }}>
                 <h3 className={styles.infoTitle}>Let’s Build Something Impactful</h3>
                 <p className={styles.infoDesc}>
-                  Whether you have an opening for a <strong>Data Scientist</strong> or <strong>ML Engineer</strong>, 
-                  want to discuss retention economics, or explore cutting-edge agentic workflows, I’d love to connect.
+                  Whether you would like to discuss <strong>data analytics</strong>, <strong>investment analytics</strong>,
+                  or a data engineering opportunity, I’d love to connect.
                 </p>
               </div>
 
@@ -123,15 +123,15 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {siteConfig.lab_email && (
+                {siteConfig.phone && (
                   <div className={styles.detailCard}>
                     <div className={styles.detailIcon}>
-                      <Mail size={20} />
+                      <Phone size={20} />
                     </div>
                     <div className={styles.detailText}>
-                      <div className={styles.detailLabel}>R&D / Collaborations</div>
-                      <a href={`mailto:${siteConfig.lab_email}`} className={styles.detailValue}>
-                        {siteConfig.lab_email}
+                      <div className={styles.detailLabel}>Phone</div>
+                      <a href={`tel:${siteConfig.phone.replaceAll(' ', '')}`} className={styles.detailValue}>
+                        {siteConfig.phone}
                       </a>
                     </div>
                   </div>
@@ -143,14 +143,9 @@ export default function Contact() {
                   </div>
                   <div className={styles.detailText}>
                     <div className={styles.detailLabel}>Current Location</div>
-                    <a
-                      href="https://www.google.com/maps/place/Pune,+Maharashtra,+India"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.detailValue}
-                    >
+                    <span className={styles.detailValue}>
                       {siteConfig.location}
-                    </a>
+                    </span>
                   </div>
                 </div>
 
@@ -161,12 +156,12 @@ export default function Contact() {
                   <div className={styles.detailText}>
                     <div className={styles.detailLabel}>Professional Network</div>
                     <a
-                      href="https://www.linkedin.com/in/souhrid-dey/"
+                      href="https://www.linkedin.com/in/camiloalegre11/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.detailValue}
                     >
-                      linkedin.com/in/souhrid-dey
+                      linkedin.com/in/camiloalegre11
                     </a>
                   </div>
                 </div>
@@ -215,10 +210,10 @@ export default function Contact() {
                     onChange={handleChange}
                     className={styles.select}
                   >
-                    <option value="Data Science / ML Role">Data Science / ML Engineering Role</option>
-                    <option value="Senior Financial BI Role">Senior Financial Analytics / BI Role</option>
-                    <option value="AI / ML Collaboration">Project Collaboration / Hackathon</option>
-                    <option value="General Inquiry">General Inquiries / Professional Greeting</option>
+                    <option value="Data Analytics / Engineering Role">Data Analytics / Engineering Role</option>
+                    <option value="Investment Analytics">Investment Analytics</option>
+                    <option value="Project Collaboration">Project Collaboration</option>
+                    <option value="General Inquiry">General Inquiry</option>
                   </select>
                 </div>
 

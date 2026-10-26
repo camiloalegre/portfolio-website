@@ -7,22 +7,20 @@ import siteConfig from '../data/site-config.json';
 import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
-  metadataBase: new URL('https://souhrid.dev'),
   title: siteConfig.title,
   description: siteConfig.description,
   keywords: [
-    'Souhrid Dey',
-    'Data Scientist',
-    'Machine Learning Engineer',
-    'Financial Data Analyst',
-    'Power BI Developer',
-    'XGBoost Churn Prediction',
-    'Tableau Public',
-    'UT Austin PGP Data Science',
-    'Agentic GenAI',
-    'Pune Data Scientist'
+    'Camilo Alegre Huaman',
+    'Data Analyst',
+    'Investment Analytics',
+    'Data Engineering',
+    'Google Cloud Platform',
+    'BigQuery',
+    'Power BI',
+    'Machine Learning',
+    'Lima Peru'
   ],
-  authors: [{ name: siteConfig.name, url: 'https://github.com/Souhrid-Dey' }],
+  authors: [{ name: siteConfig.name, url: 'https://github.com/camiloalegre' }],
   creator: siteConfig.name,
   icons: {
     icon: [
@@ -34,24 +32,14 @@ export const metadata = {
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
-    url: 'https://souhrid.dev',
-    siteName: 'Souhrid Dey — Data Observatory',
-    images: [
-      {
-        url: '/images/avatar.png',
-        width: 1200,
-        height: 630,
-        alt: 'Souhrid Dey — Data Scientist Portfolio'
-      }
-    ],
+    siteName: 'Camilo Alegre — Data Observatory',
     locale: 'en_US',
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.title,
-    description: siteConfig.description,
-    images: ['/images/avatar.png']
+    description: siteConfig.description
   },
   robots: {
     index: true,

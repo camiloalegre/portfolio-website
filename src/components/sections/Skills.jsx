@@ -1,6 +1,6 @@
 'use client';
 
-import { Terminal, Cpu, Database, LineChart, Code, Sparkles, Layers } from 'lucide-react';
+import { Terminal, Cpu, Database, Code, Layers, BarChart3, Palette, Languages } from 'lucide-react';
 import skillsData from '../../data/skills.json';
 import styles from '../../styles/skills.module.css';
 import FadeIn from '../ui/FadeIn';
@@ -9,12 +9,13 @@ import TechOrbit from '../ui/TechOrbit';
 export default function Skills() {
   const getCategoryIcon = (category) => {
     switch (category) {
-      case 'Machine Learning & AI': return <Cpu size={20} color="#c084fc" />;
-      case 'Generative AI & LLMs': return <Sparkles size={20} color="#f472b6" />;
-      case 'Statistical Modeling & Econometrics': return <LineChart size={20} color="#38bdf8" />;
-      case 'Business Intelligence & Data Viz': return <Layers size={20} color="#fbbf24" />;
-      case 'SQL & Data Engineering': return <Database size={20} color="#a855f7" />;
-      case 'Languages & Modern Tech': return <Code size={20} color="#34d399" />;
+      case 'Machine Learning and AI': return <Cpu size={20} color="#c084fc" />;
+      case 'Analytics and Visualization': return <BarChart3 size={20} color="#fbbf24" />;
+      case 'Cloud and Data Engineering': return <Database size={20} color="#a855f7" />;
+      case 'Databases': return <Database size={20} color="#38bdf8" />;
+      case 'Creative Tools': return <Palette size={20} color="#f472b6" />;
+      case 'Languages': return <Languages size={20} color="#34d399" />;
+      case 'Programming and Data Processing': return <Code size={20} color="#34d399" />;
       default: return <Terminal size={20} color="#c084fc" />;
     }
   };
@@ -30,7 +31,7 @@ export default function Skills() {
             </div>
             <h2 className="sectionTitle">Skills & Toolchain</h2>
             <p className="sectionSubtitle">
-              Core methodologies, programming languages, econometric frameworks, and modern AI toolkits.
+              Practical tools and technologies across analytics, data engineering, and creative work.
             </p>
           </div>
 
@@ -52,7 +53,7 @@ export default function Skills() {
                       className={`${styles.skillItem} ${skill.highlight ? styles.skillHighlight : ''}`}
                     >
                       <span className={styles.skillName}>{skill.name}</span>
-                      <span className={styles.skillLevel}>{skill.level}</span>
+                      {skill.detail && <span className={styles.skillLevel}>{skill.detail}</span>}
                     </div>
                   ))}
                 </div>

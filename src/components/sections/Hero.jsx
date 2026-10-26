@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, FileText, Mail } from 'lucide-react';
-import { LinkedinIcon, GithubIcon, KaggleIcon, LeetcodeIcon, TableauIcon } from '../ui/Icons';
+import { ArrowRight, FileText, Mail, Palette } from 'lucide-react';
+import { LinkedinIcon, GithubIcon, KaggleIcon, LeetcodeIcon, TableauIcon, InstagramIcon } from '../ui/Icons';
 import ResumeModal from '../layout/ResumeModal';
 import socialLinks from '../../data/social-links.json';
 import siteConfig from '../../data/site-config.json';
@@ -17,10 +17,9 @@ const Hero3DObject = dynamic(() => import('../ui/Hero3DObject'), { ssr: false })
 const ConstellationCanvas = dynamic(() => import('../ui/ConstellationCanvas'), { ssr: false });
 
 const ROLES = [
-  'Data Scientist',
-  'Machine Learning Engineer',
-  'Financial Analytics Specialist',
-  'Agentic GenAI Developer'
+  'Investment Analytics',
+  'Data Engineering',
+  'Machine Learning',
 ];
 
 /**
@@ -73,6 +72,8 @@ export default function Hero() {
       case 'Code2': return <LeetcodeIcon size={18} />;
       case 'BarChart3': return <TableauIcon size={18} />;
       case 'Mail': return <Mail size={18} />;
+      case 'Instagram': return <InstagramIcon size={18} />;
+      case 'Palette': return <Palette size={18} />;
       default: return <GithubIcon size={18} />;
     }
   };
@@ -89,7 +90,7 @@ export default function Hero() {
             <span className={styles.availabilityText}>{siteConfig.availability}</span>
           </div>
 
-          <p className={styles.titleIntro}>Welcome to the Observatory of</p>
+          <p className={styles.titleIntro}>{siteConfig.role}</p>
           <h1 className={styles.name}>{siteConfig.name}</h1>
 
           <div className={styles.roleWrapper}>
@@ -98,14 +99,12 @@ export default function Hero() {
           </div>
 
           <p className={styles.lead}>
-            Fusing <span className={styles.leadHighlight}>6+ years of corporate financial analytics & BI</span> (Maersk, Genpact, Eaton) 
-            with academic distinction in <span className={styles.leadHighlight}>Data Science & Machine Learning</span> from UT Austin McCombs (4.07/4.33 GPA).
-            Uncovering actionable signals in high-dimensional noise.
+          Industrial Engineer with <span className={styles.leadHighlight}>3+ years of experience</span> building data-driven solutions on Google Cloud Platform (GCP), automating ETL pipelines, integrating APIs, and modeling data in BigQuery. Skilled in <span className={styles.leadHighlight}>Machine Learning</span> for predictive analytics, transforming raw data into actionable insights that support business decision-making.
           </p>
 
           <div className={styles.ctaGroup}>
             <Link href="#projects" className="btnPrimary">
-              <span>Explore Observatory Projects</span>
+              <span>Explore Portfolio Projects</span>
               <ArrowRight size={18} />
             </Link>
 
@@ -120,7 +119,7 @@ export default function Hero() {
 
 
         <div className={styles.socialBar}>
-          <span className={styles.socialLabel}>Verified Observatories:</span>
+          <span className={styles.socialLabel}>Verified Portfolio Links:</span>
           <div className={styles.socialIconsGroup}>
             {socialLinks.map((item) => (
               <a

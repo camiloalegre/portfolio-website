@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Python",
+    "issuer": "Stanford University's Code in Place",
+    "year": "2026"
+  },
+  {
+    "name": "BigQuery for Data Analysts",
+    "issuer": "Google",
+    "year": "2025"
+  },
+  {
+    "name": "Professional Foundations of Data Analytics",
+    "issuer": "Microsoft and LinkedIn",
+    "year": "2025"
+  },
+  {
+    "name": "SQL",
+    "issuer": "San Ignacio University, Miami",
+    "year": "2024"
+  },
+  {
+    "name": "Intermediate-Advanced Power BI",
+    "issuer": "Netzun",
+    "year": "2024",
+    "credentialId": "787EC7C4"
+  },
+  {
+    "name": "Google: Artificial Intelligence and Productivity",
+    "issuer": "Google",
+    "year": "2024",
+    "credentialId": "OA-2024-0829000529518"
+  },
+  {
+    "name": "Project Management with Agile Methodologies and Lean Approaches",
+    "issuer": "Fundación Telefónica Movistar Perú",
+    "year": "2024"
+  }
+]

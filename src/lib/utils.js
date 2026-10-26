@@ -1,5 +1,5 @@
 /**
- * Utility functions for Souhrid Dey's Data Observatory portfolio.
+ * Utility functions for Camilo Alegre Huaman's portfolio.
  */
 
 export function cn(...classes) {

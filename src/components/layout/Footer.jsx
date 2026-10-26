@@ -1,7 +1,7 @@
 'use client';
 
-import { ArrowUp, Mail } from 'lucide-react';
-import { LinkedinIcon, GithubIcon, KaggleIcon, LeetcodeIcon, TableauIcon } from '../ui/Icons';
+import { ArrowUp, Mail, Palette } from 'lucide-react';
+import { LinkedinIcon, GithubIcon, InstagramIcon } from '../ui/Icons';
 import socialLinks from '../../data/social-links.json';
 import siteConfig from '../../data/site-config.json';
 import styles from '../../styles/footer.module.css';
@@ -15,9 +15,8 @@ export default function Footer() {
     switch (iconName) {
       case 'Linkedin': return <LinkedinIcon size={18} />;
       case 'Github': return <GithubIcon size={18} />;
-      case 'Database': return <KaggleIcon size={18} />;
-      case 'Code2': return <LeetcodeIcon size={18} />;
-      case 'BarChart3': return <TableauIcon size={18} />;
+      case 'Instagram': return <InstagramIcon size={18} />;
+      case 'Palette': return <Palette size={18} />;
       case 'Mail': return <Mail size={18} />;
       default: return <GithubIcon size={18} />;
     }
@@ -29,8 +28,7 @@ export default function Footer() {
         <div className={styles.brandInfo}>
           <h3 className={styles.brandTitle}>The Data Observatory</h3>
           <p className={styles.brandDesc}>
-            Turning raw signals and complex statistical distributions into actionable business intelligence,
-            predictive machine learning, and agentic AI.
+            Data analytics, investment insights, and cloud data solutions built with Python, SQL, and Google Cloud.
           </p>
         </div>
 

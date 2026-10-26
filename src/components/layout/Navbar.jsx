@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, FileText, Sparkles } from 'lucide-react';
+import { Menu, X, FileText } from 'lucide-react';
 import ResumeModal from './ResumeModal';
 import styles from '../../styles/navbar.module.css';
 
@@ -23,10 +23,10 @@ export default function Navbar() {
   const navItems = [
     { label: 'About', href: '#about' },
     { label: 'Projects', href: '#projects' },
-    { label: 'AI Lab', href: '#ai-lab' },
     { label: 'Skills', href: '#skills' },
     { label: 'Experience', href: '#experience' },
     { label: 'Education', href: '#education' },
+    { label: 'Certifications', href: '#certifications' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -36,8 +36,8 @@ export default function Navbar() {
         <div className={`container ${styles.navContainer}`}>
           <Link href="#hero" className={styles.brand}>
             <div className={styles.brandDot} />
-            <span className={styles.brandName}>Souhrid Dey</span>
-            <span className={styles.brandTitle}>Data Observatory</span>
+            <span className={styles.brandName}>Camilo Alegre</span>
+            <span className={styles.brandTitle}>Data Portfolio</span>
           </Link>
 
           <nav>

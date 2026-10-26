@@ -13,7 +13,7 @@ export default function CoreEcosystem() {
               Core Ecosystem
             </h3>
             <p style={{ color: 'var(--text-muted)' }}>
-              The foundational technologies powering my analytics and agentic solutions.
+              The core tools behind my analytics, data engineering, and machine learning work.
             </p>
           </div>
           <TechOrbit />

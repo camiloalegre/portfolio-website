@@ -154,6 +154,26 @@
   transition: transform 0.5s ease;
 }
 
+.imageFallback {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 72% 30%, rgba(56, 189, 248, 0.24), transparent 32%),
+    radial-gradient(ellipse at 24% 78%, rgba(168, 85, 247, 0.24), transparent 36%),
+    linear-gradient(135deg, #100b25, #151c38 55%, #0b1020);
+}
+
+.imageFallback::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(135deg, black, transparent 80%);
+}
+
 .card:hover .cardImage {
   transform: scale(1.05);
 }
@@ -228,6 +248,14 @@
   background: rgba(0,0,0,0.2);
 }
 
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
 .viewCaseBtn {
   display: inline-flex;
   align-items: center;
@@ -239,8 +267,28 @@
   transition: color 0.2s;
 }
 
+.caseStudyLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  text-decoration: none;
+}
+
+.caseStudyLink:hover {
+  color: var(--accent-lilac);
+}
+
 .viewCaseBtn:hover {
   color: var(--accent-primary);
+}
+
+.cardSummary {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 0 0 1rem;
 }
 
 .cardLinks {

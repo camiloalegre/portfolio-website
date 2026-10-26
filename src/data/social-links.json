@@ -1,44 +1,37 @@
 [
   {
     "name": "LinkedIn",
-    "url": "https://www.linkedin.com/in/souhrid-dey/",
-    "handle": "souhrid-dey",
+    "url": "https://www.linkedin.com/in/camiloalegre11/",
+    "handle": "camiloalegre11",
     "icon": "Linkedin",
     "primary": true
   },
   {
     "name": "GitHub",
-    "url": "https://github.com/Souhrid-Dey",
-    "handle": "Souhrid-Dey",
+    "url": "https://github.com/camiloalegre",
+    "handle": "camiloalegre",
     "icon": "Github",
     "primary": true
   },
   {
-    "name": "Kaggle",
-    "url": "https://www.kaggle.com/souhriddey",
-    "handle": "souhriddey",
-    "icon": "Database",
-    "primary": true
-  },
-  {
-    "name": "LeetCode",
-    "url": "https://leetcode.com/u/Souhrid_Dey/",
-    "handle": "Souhrid_Dey",
-    "icon": "Code2",
-    "primary": true
-  },
-  {
-    "name": "Tableau",
-    "url": "https://public.tableau.com/app/profile/souhrid.dey/vizzes",
-    "handle": "souhrid.dey",
-    "icon": "BarChart3",
-    "primary": true
-  },
-  {
     "name": "Email",
-    "url": "/#contact",
-    "handle": "dsouhrid@gmail.com",
+    "url": "mailto:camiloalegre11@gmail.com",
+    "handle": "camiloalegre11@gmail.com",
     "icon": "Mail",
+    "primary": true
+  },
+  {
+    "name": "ArtStation",
+    "url": "https://www.artstation.com/camiloalegre11",
+    "handle": "camiloalegre11",
+    "icon": "Palette",
+    "primary": true
+  },
+  {
+    "name": "Instagram",
+    "url": "https://www.instagram.com/kamart11_/",
+    "handle": "kamart11_",
+    "icon": "Instagram",
     "primary": true
   }
 ]

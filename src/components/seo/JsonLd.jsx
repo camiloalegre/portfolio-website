@@ -14,42 +14,30 @@ export default function JsonLd() {
     description: siteConfig.description,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Pune',
-      addressRegion: 'Maharashtra',
-      addressCountry: 'India'
+      addressLocality: 'Lima',
+      addressCountry: 'Peru'
     },
+    telephone: siteConfig.phone,
     email: siteConfig.email,
     sameAs: sameAsUrls,
-    alumniOf: [
-      {
-        '@type': 'EducationalOrganization',
-        name: 'The University of Texas at Austin - McCombs School of Business'
-      },
-      {
-        '@type': 'EducationalOrganization',
-        name: 'Great Lakes Executive Learning'
-      },
-      {
-        '@type': 'EducationalOrganization',
-        name: 'University of Calcutta'
-      }
-    ],
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Universidad César Vallejo'
+    },
     knowsAbout: [
-      'Data Science',
+      'Industrial Engineering',
+      'Investment Analytics',
+      'Data Analytics',
+      'Data Engineering',
       'Machine Learning',
-      'Predictive Modeling',
-      'Econometrics',
-      'Statistical Inference',
-      'Supervised and Unsupervised Learning',
-      'XGBoost',
-      'Business Intelligence',
+      'Google Cloud Platform',
+      'BigQuery',
       'Power BI',
-      'Tableau',
+      'Looker Studio',
       'SQL',
       'Python',
-      'FastAPI',
-      'Generative AI',
-      'Prompt Engineering'
+      'Data Warehousing',
+      'Data Modeling'
     ]
   };
 

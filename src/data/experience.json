@@ -1,46 +1,99 @@
 [
   {
-    "company": "AP Moller Maersk",
-    "role": "Financial Data Analyst",
-    "location": "Pune, Hybrid",
-    "period": "Apr 2024 – Present",
-    "type": "Full-Time",
-    "summary": "Power BI developer in the COE - Reporting team of FP&A for the Logistics and Services business of Maersk, responsible for translating complex financial data into clear, actionable insights for key business leaders.",
+    "company": "SEVEN SERVICES E.I.R.L.",
+    "role": "Data Analyst",
+    "location": "Lima, Peru",
+    "period": "July 2025 – Present",
+    "summary": "Build analytics solutions and reporting tools to support operational and management decision-making.",
     "highlights": [
-      "Develop, deploy, and maintain dynamic and scalable Power BI dashboards for global, regional, and product-specific financial analysis.",
-      "Engineer and optimize data workflows using Power Query and Dataflows to ensure data integrity; design and implement complex data models in Power BI.",
-      "Author complex DAX measures and functions to calculate critical KPIs, perform time-intelligence analysis, and create calculation groups using Tabular Editor.",
-      "Own a portfolio of key financial reports, managing the end-to-end lifecycle and utilizing DAX Studio for performance tuning."
+      "Generated analytical insights that contributed to approximately 45% value capture for the department.",
+      "Contributed to People Analytics initiatives associated with a 5% increase in retention and a 15% improvement in talent acquisition.",
+      "Developed Looker Studio dashboards for more than 11 clients, centralizing analysis of AI tool performance.",
+      "Built executive dashboards for management-level project monitoring.",
+      "Automated ETL pipelines to improve operational efficiency and reduce data update times.",
+      "Applied data warehousing and data modeling concepts to analytical solutions."
     ],
-    "skills": ["Power BI", "DAX", "Power Query", "Financial Modeling", "Data Transformation", "Agile/Jira"]
+    "skillsLabel": "Tools & technical knowledge",
+    "skills": [
+      "Python",
+      "SQL",
+      "Google Cloud Platform",
+      "BigQuery",
+      "Looker Studio",
+      "Power BI",
+      "Tableau",
+      "Git",
+      "Docker",
+      "Airflow",
+      "LangGraph"
+    ]
   },
   {
-    "company": "Genpact",
-    "role": "Process Developer",
-    "location": "Pune, Hybrid",
-    "period": "Jul 2023 – Mar 2024",
-    "type": "Full-Time",
-    "summary": "Handled Credit and Collection activities for Eaton’s Filtration Division of North America, utilizing advanced data skills for reporting and deliverables.",
+    "company": "GRUPO EMPRESARIAL PAZ S.A.C.",
+    "role": "Cost Analyst",
+    "location": "Chimbote, Peru",
+    "period": "January 2025 – June 2025",
+    "summary": "Supported cost control and tax-audit documentation through historical data consolidation, database organization, and reporting.",
     "highlights": [
-      "Used advanced Excel skills to prepare reports for the client and Genpact’s deliverables.",
-      "Prepared SOPs and documented previous data for better visualization and integration.",
-      "Analyzed opportunities for Continuous Improvement, Risk Management, and Lean Strategic implementations."
+      "Consolidated approximately 18 months of historical production data for tax audits, maintaining traceability.",
+      "Structured databases for accounting documentation management.",
+      "Prepared cost reports using Power BI and Excel to support financial control.",
+      "Verified and reconciled documentation to support cost consistency."
     ],
-    "skills": ["Advanced Excel", "Reporting", "Process Improvement", "Risk Management", "SOP Documentation"]
+    "skills": ["Power BI", "Excel", "Cost Analysis", "Data Reconciliation"]
   },
   {
-    "company": "Eaton",
-    "role": "Associate Analyst",
-    "location": "Pune, Hybrid",
-    "period": "Jun 2020 – Jul 2023",
-    "type": "Full-Time",
-    "summary": "Handled Credit and Collections for Filtration Division of North American region in Order-to-Cash (OTC) process for Eaton's Global Financial Systems and Services (GFSS).",
+    "company": "CONSORCIO PESQUERO EL FERROL S.A.C.",
+    "role": "Quality Assurance Assistant",
+    "location": "Chimbote, Peru",
+    "period": "January 2024 – December 2024",
+    "summary": "Supported quality control, documentation, and process improvement in a production environment.",
     "highlights": [
-      "Interacted with customers for collection of past dues, remittances, and debit memos.",
-      "Analyzed and investigated deductions and claims on receipts, successfully resolving disputes.",
-      "Managed customer setup, account creation, credit review analysis, and maintenance.",
-      "Handled AR invoicing, maintenance, and generated ad-hoc reports for the team."
+      "Prepared statistical reports for quality control and managed raw material reception databases using Excel and SQLite.",
+      "Produced documentation supporting compliance with quality standards.",
+      "Supported internal audits, process analysis, and improvement initiatives using Power BI.",
+      "Worked with quality management concepts including GMP, SSOP, and HACCP."
     ],
-    "skills": ["Credit & Collections", "Order-to-Cash (OTC)", "Dispute Resolution", "AR Invoicing", "Customer Setup"]
+    "skills": ["Excel", "SQLite", "Power BI", "GMP", "SSOP", "HACCP"]
+  },
+  {
+    "type": "additional",
+    "company": "LinkedIn",
+    "role": "Content Creator",
+    "location": "",
+    "period": "2025 – Present",
+    "summary": "",
+    "highlights": [],
+    "skills": []
+  },
+  {
+    "type": "additional",
+    "company": "Freelance",
+    "role": "Illustrator and Designer",
+    "location": "",
+    "period": "2020 – Present",
+    "summary": "",
+    "highlights": [],
+    "skills": []
+  },
+  {
+    "type": "additional",
+    "company": "Inca Kola",
+    "role": "Content Creator",
+    "location": "",
+    "period": "October 2023",
+    "summary": "",
+    "highlights": [],
+    "skills": []
+  },
+  {
+    "type": "additional",
+    "company": "INEI",
+    "role": "Census Volunteer",
+    "location": "",
+    "period": "September 2017",
+    "summary": "",
+    "highlights": [],
+    "skills": []
   }
 ]

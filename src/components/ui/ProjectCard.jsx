@@ -22,13 +22,17 @@ export default function ProjectCard({ project, tier = 1 }) {
     <article className={`${styles.card} ${isHero ? styles.cardHero : ''} ${getTierClass(tier)}`}>
       {/* Image Header */}
       <div className={styles.cardImageWrapper}>
-        <Image 
-          src={project.image} 
-          alt={project.title} 
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className={styles.cardImage} 
-        />
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className={styles.cardImage}
+          />
+        ) : (
+          <div className={styles.imageFallback} aria-hidden="true" />
+        )}
         <div className={styles.cardImageOverlay} />
         <span className={styles.categoryTagImg}>{project.category}</span>
       </div>
@@ -36,6 +40,7 @@ export default function ProjectCard({ project, tier = 1 }) {
       <div className={styles.cardContent}>
         <h3 className={styles.cardTitle}>{project.title}</h3>
         {project.subtitle && <div className={styles.cardSubtitle}>{project.subtitle}</div>}
+        <p className={styles.cardSummary}>{project.summary}</p>
 
         {/* Minimal Tags */}
         {project.tags && project.tags.length > 0 && (
@@ -54,11 +59,29 @@ export default function ProjectCard({ project, tier = 1 }) {
 
       {/* Action Footer */}
       <div className={styles.cardFooter}>
-        <Link href={`/project/${project.id}`} className={styles.viewCaseBtn}>
-          View Case Study <ArrowRight size={16} />
-        </Link>
+        <div className={styles.cardActions}>
+          {project.primaryLink ? (
+            <a
+              href={project.primaryLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.viewCaseBtn}
+            >
+              {project.primaryLink.label} <ExternalLink size={15} />
+            </a>
+          ) : (
+            <Link href={`/project/${project.id}`} className={styles.viewCaseBtn}>
+              View Case Study <ArrowRight size={16} />
+            </Link>
+          )}
+          {project.primaryLink && (
+            <Link href={`/project/${project.id}`} className={styles.caseStudyLink}>
+              Case study <ArrowRight size={14} />
+            </Link>
+          )}
+        </div>
         <div className={styles.cardLinks}>
-          {project.github && (
+          {project.github && project.github !== project.primaryLink?.url && (
             <a
               href={project.github}
               target="_blank"
@@ -69,6 +92,19 @@ export default function ProjectCard({ project, tier = 1 }) {
               <GithubIcon size={18} />
             </a>
           )}
+          {project.externalLinks?.filter((link) => link.url !== project.github).map((link) => (
+            <a
+              key={link.url}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.iconLink}
+              title={link.label}
+              aria-label={link.label}
+            >
+              <ExternalLink size={18} />
+            </a>
+          ))}
           {project.demo && (
             <a
               href={project.demo}

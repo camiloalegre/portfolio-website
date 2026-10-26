@@ -51,6 +51,25 @@
   transition: transform 0.5s ease;
 }
 
+.coverFallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(ellipse at 72% 30%, rgba(56, 189, 248, 0.24), transparent 32%),
+    radial-gradient(ellipse at 24% 78%, rgba(168, 85, 247, 0.24), transparent 36%),
+    linear-gradient(135deg, #100b25, #151c38 55%, #0b1020);
+}
+
+.coverFallback span {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .imageWrapper:hover .coverImage {
   transform: scale(1.02);
 }

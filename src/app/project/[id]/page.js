@@ -69,14 +69,20 @@ export default async function ProjectPage({ params }) {
           </div>
           
           <div className={styles.imageWrapper}>
-            <Image 
-              src={project.image}
-              alt={project.title}
-              fill
-              sizes="(max-width: 1200px) 100vw, 1200px"
-              className={styles.coverImage}
-              priority
-            />
+            {project.image ? (
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                className={styles.coverImage}
+                priority
+              />
+            ) : (
+              <div className={styles.coverFallback} aria-hidden="true">
+                <span>{project.category}</span>
+              </div>
+            )}
           </div>
         </div>
 
@@ -150,17 +156,19 @@ export default async function ProjectPage({ params }) {
           </div>
 
           <aside className={styles.sidebar}>
-            <div className={styles.metricsCard}>
-              <h3>Key Metrics & KPIs</h3>
-              <div className={styles.metricList}>
-                {project.metrics.map((metric, i) => (
-                  <div key={i} className={styles.metricItem}>
-                    <span className={styles.metricValue}>{metric.value}</span>
-                    <span className={styles.metricLabel}>{metric.label}</span>
-                  </div>
-                ))}
+            {project.metrics?.length > 0 && (
+              <div className={styles.metricsCard}>
+                <h3>Key Metrics & KPIs</h3>
+                <div className={styles.metricList}>
+                  {project.metrics.map((metric, i) => (
+                    <div key={i} className={styles.metricItem}>
+                      <span className={styles.metricValue}>{metric.value}</span>
+                      <span className={styles.metricLabel}>{metric.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             <div className={styles.links}>
               {project.demo && (
@@ -168,7 +176,17 @@ export default async function ProjectPage({ params }) {
                   View Live Demo / Viz
                 </a>
               )}
-              {project.github && (
+              {project.primaryLink && (
+                <a href={project.primaryLink.url} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.btnPrimary}`}>
+                  {project.primaryLink.label}
+                </a>
+              )}
+              {project.externalLinks?.map((link) => (
+                <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.btnSecondary}`}>
+                  {link.label}
+                </a>
+              ))}
+              {!project.primaryLink && project.github && (
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.btnSecondary}`}>
                   View Source on GitHub
                 </a>

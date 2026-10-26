@@ -92,6 +92,20 @@
   margin-bottom: 0.75rem;
 }
 
+.location {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-bottom: 0.75rem;
+}
+
+.certifications {
+  margin: 4rem auto 0;
+}
+
+.certifications :global(.sectionHeader) {
+  margin-bottom: 2rem;
+}
+
 .highlightsList {
   list-style: none;
   display: flex;
