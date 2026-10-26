@@ -6,7 +6,7 @@ import styles from '../../styles/techorbit.module.css';
 
 const TECH_ITEMS = [
   { icon: <Code2 size={30} />, name: "Python", color: "#38bdf8" },
-  { icon: <Database size={30} />, name: "SQL", color: "#a855f7" },
+  { icon: <Database size={30} />, name: "SQL", color: "#60a5fa" },
   { icon: <LineChart size={30} />, name: "Power BI", color: "#f59e0b" },
   { icon: <Cpu size={30} />, name: "Scikit-Learn", color: "#f472b6" },
   { icon: <Cloud size={30} />, name: "Statistics", color: "#fb923c" },

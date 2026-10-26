@@ -21,7 +21,7 @@
 }
 
 .featuredCard {
-  border-color: rgba(168, 85, 247, 0.4);
+  border-color: rgba(59, 130, 246, 0.4);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), var(--glow-violet-subtle);
 }
 
@@ -62,10 +62,10 @@
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--accent-lilac);
-  background: rgba(139, 92, 246, 0.15);
+  background: rgba(59, 130, 246, 0.15);
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(139, 92, 246, 0.3);
+  border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .periodBadge {
@@ -135,7 +135,7 @@
   flex-wrap: wrap;
   gap: 0.4rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(139, 92, 246, 0.12);
+  border-top: 1px solid rgba(59, 130, 246, 0.14);
   margin-top: auto;
 }
 

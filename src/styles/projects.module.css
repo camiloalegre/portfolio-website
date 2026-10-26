@@ -12,7 +12,7 @@
 .filterBtn {
   padding: 0.55rem 1.25rem;
   border-radius: var(--radius-full);
-  background: rgba(19, 14, 42, 0.7);
+  background: rgba(8, 20, 38, 0.82);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
   font-size: 0.88rem;
@@ -21,7 +21,7 @@
 }
 
 .filterBtn:hover {
-  background: rgba(28, 21, 61, 0.9);
+  background: rgba(16, 35, 67, 0.92);
   color: var(--text-primary);
   border-color: var(--border-medium);
 }
@@ -31,7 +31,7 @@
   color: #ffffff;
   border-color: transparent;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.35);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.32);
 }
 
 /* Tier Headers */
@@ -106,37 +106,37 @@
 }
 
 .cardHero {
-  border: 1px solid rgba(139, 92, 246, 0.35);
+  border: 1px solid rgba(59, 130, 246, 0.35);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 }
 
 .cardTier1 {
-  background: linear-gradient(145deg, rgba(30, 25, 45, 0.85) 0%, rgba(50, 40, 15, 0.65) 100%);
-  border-color: rgba(218, 165, 32, 0.25);
+  background: linear-gradient(145deg, rgba(13, 31, 58, 0.9) 0%, rgba(8, 20, 38, 0.8) 100%);
+  border-color: rgba(59, 130, 246, 0.28);
 }
 
 .cardTier1:hover {
-  box-shadow: 0 12px 35px rgba(218, 165, 32, 0.15), 0 0 30px rgba(139, 92, 246, 0.45);
-  border-color: rgba(218, 165, 32, 0.6);
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.2), 0 0 30px rgba(59, 130, 246, 0.24);
+  border-color: rgba(96, 165, 250, 0.62);
 }
 
 .cardTier2 {
-  background: linear-gradient(145deg, rgba(20, 15, 35, 0.85) 0%, rgba(45, 45, 55, 0.65) 100%);
+  background: linear-gradient(145deg, rgba(11, 25, 48, 0.9) 0%, rgba(8, 20, 38, 0.8) 100%);
   border-color: rgba(192, 192, 192, 0.25);
 }
 
 .cardTier2:hover {
-  box-shadow: 0 12px 35px rgba(192, 192, 192, 0.15), 0 0 25px rgba(139, 92, 246, 0.35);
+  box-shadow: 0 12px 35px rgba(59, 130, 246, 0.18), 0 0 25px rgba(59, 130, 246, 0.22);
   border-color: rgba(192, 192, 192, 0.6);
 }
 
 .cardTier3 {
-  background: linear-gradient(145deg, rgba(25, 15, 30, 0.85) 0%, rgba(45, 25, 15, 0.65) 100%);
+  background: linear-gradient(145deg, rgba(13, 27, 50, 0.9) 0%, rgba(8, 20, 38, 0.8) 100%);
   border-color: rgba(205, 127, 50, 0.25);
 }
 
 .cardTier3:hover {
-  box-shadow: 0 12px 35px rgba(205, 127, 50, 0.15), 0 0 20px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.16), 0 0 20px rgba(59, 130, 246, 0.18);
   border-color: rgba(205, 127, 50, 0.6);
 }
 
@@ -159,8 +159,8 @@
   inset: 0;
   background:
     radial-gradient(ellipse at 72% 30%, rgba(56, 189, 248, 0.24), transparent 32%),
-    radial-gradient(ellipse at 24% 78%, rgba(168, 85, 247, 0.24), transparent 36%),
-    linear-gradient(135deg, #100b25, #151c38 55%, #0b1020);
+    radial-gradient(ellipse at 24% 78%, rgba(37, 99, 235, 0.28), transparent 36%),
+    linear-gradient(135deg, #081426, #102343 55%, #050b16);
 }
 
 .imageFallback::after {
@@ -181,7 +181,7 @@
 .cardImageOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 60%, rgba(7, 5, 16, 0.9));
+  background: linear-gradient(to bottom, transparent 60%, rgba(5, 11, 22, 0.9));
 }
 
 .categoryTagImg {
@@ -190,7 +190,7 @@
   left: 1rem;
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full);
-  background: rgba(139, 92, 246, 0.85);
+  background: rgba(37, 99, 235, 0.88);
   backdrop-filter: blur(4px);
   color: #fff;
   font-family: var(--font-mono);
@@ -311,7 +311,7 @@
 }
 
 .iconLink:hover {
-  background: rgba(139, 92, 246, 0.25);
+  background: rgba(59, 130, 246, 0.22);
   color: #ffffff;
   border-color: var(--accent-violet);
   transform: scale(1.05);

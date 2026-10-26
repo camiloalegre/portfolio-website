@@ -56,8 +56,8 @@ HIDDEN_2_NODES.forEach((h2) => {
 
 const ALL_NODES = [
   ...INPUT_NODES.map((pos) => ({ pos, color: '#38bdf8', emissive: '#0284c7', label: 'Input' })),
-  ...HIDDEN_1_NODES.map((pos) => ({ pos, color: '#a855f7', emissive: '#7e22ce', label: 'Hidden 1' })),
-  ...HIDDEN_2_NODES.map((pos) => ({ pos, color: '#c084fc', emissive: '#9333ea', label: 'Hidden 2' })),
+  ...HIDDEN_1_NODES.map((pos) => ({ pos, color: '#3b82f6', emissive: '#1d4ed8', label: 'Hidden 1' })),
+  ...HIDDEN_2_NODES.map((pos) => ({ pos, color: '#93c5fd', emissive: '#2563eb', label: 'Hidden 2' })),
   ...OUTPUT_NODES.map((pos) => ({ pos, color: '#f472b6', emissive: '#db2777', label: 'Output' })),
 ];
 
@@ -130,7 +130,7 @@ function SynapticLines() {
           itemSize={3}
         />
       </bufferGeometry>
-      <lineBasicMaterial color="#8b5cf6" transparent opacity={0.28} />
+      <lineBasicMaterial color="#3b82f6" transparent opacity={0.28} />
     </lineSegments>
   );
 }
@@ -206,7 +206,7 @@ function EngineRings() {
       {/* Outer Gyro Ring */}
       <mesh ref={ring1Ref}>
         <torusGeometry args={[2.2, 0.015, 16, 80]} />
-        <meshBasicMaterial color="#8b5cf6" transparent opacity={0.25} />
+        <meshBasicMaterial color="#3b82f6" transparent opacity={0.25} />
       </mesh>
 
       {/* Counter-Rotating Mid Ring */}
@@ -253,7 +253,7 @@ export default function DataCore3D() {
       >
         <ambientLight intensity={0.7} />
         <pointLight position={[10, 10, 10]} intensity={1.2} color="#ffffff" />
-        <pointLight position={[-8, -5, -6]} intensity={0.8} color="#8b5cf6" />
+        <pointLight position={[-8, -5, -6]} intensity={0.8} color="#3b82f6" />
         <pointLight position={[0, -8, 5]} intensity={0.5} color="#38bdf8" />
 
         <NeuralEngineObject />

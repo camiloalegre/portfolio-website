@@ -13,9 +13,9 @@
 }
 
 .scrolled {
-  background: rgba(11, 8, 26, 0.92);
+  background: rgba(5, 11, 22, 0.94);
   border-bottom-color: var(--border-medium);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), 0 0 15px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45), 0 0 15px rgba(59, 130, 246, 0.15);
 }
 
 .navContainer {
@@ -44,7 +44,7 @@
 }
 
 .brandName {
-  background: linear-gradient(135deg, #ffffff 40%, #c4b5fd 100%);
+  background: linear-gradient(135deg, #ffffff 40%, #bfdbfe 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -109,14 +109,14 @@
   font-size: 0.88rem;
   font-weight: 600;
   border-radius: var(--radius-md);
-  background: rgba(139, 92, 246, 0.12);
+  background: rgba(59, 130, 246, 0.12);
   border: 1px solid var(--border-medium);
   color: var(--accent-lilac);
   transition: all var(--transition-fast);
 }
 
 .resumeBtn:hover {
-  background: rgba(139, 92, 246, 0.25);
+  background: rgba(59, 130, 246, 0.24);
   border-color: var(--accent-purple);
   color: #ffffff;
   box-shadow: var(--glow-violet-subtle);
@@ -153,7 +153,7 @@
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background: rgba(13, 9, 30, 0.97);
+    background: rgba(8, 20, 38, 0.98);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-medium);
     padding: 1.5rem;

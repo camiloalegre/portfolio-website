@@ -52,20 +52,20 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 0.75rem;
-  background: rgba(13, 9, 30, 0.75);
+  background: rgba(8, 20, 38, 0.84);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
 }
 
 .skillItem:hover {
-  background: rgba(28, 21, 61, 0.9);
+  background: rgba(16, 35, 67, 0.92);
   border-color: var(--accent-violet);
 }
 
 .skillHighlight {
-  border-color: rgba(168, 85, 247, 0.35);
-  background: rgba(20, 14, 45, 0.85);
+  border-color: rgba(59, 130, 246, 0.35);
+  background: rgba(11, 25, 48, 0.9);
 }
 
 .skillName {
@@ -78,10 +78,10 @@
   font-size: 0.72rem;
   font-family: var(--font-mono);
   color: var(--accent-lilac);
-  background: rgba(139, 92, 246, 0.15);
+  background: rgba(59, 130, 246, 0.14);
   padding: 0.15rem 0.45rem;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.25);
 }
 
 @media (max-width: 992px) {

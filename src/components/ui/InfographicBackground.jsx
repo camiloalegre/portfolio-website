@@ -65,7 +65,7 @@ export default function InfographicBackground() {
         
         {/* Animated Nodes */}
         <motion.circle
-          cx="600" cy="200" r="4" fill="#a855f7"
+          cx="600" cy="200" r="4" fill="#3b82f6"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.8 }}
           transition={{ delay: 1.5, duration: 0.5 }}

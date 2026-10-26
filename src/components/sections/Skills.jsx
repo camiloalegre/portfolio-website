@@ -9,14 +9,14 @@ import TechOrbit from '../ui/TechOrbit';
 export default function Skills() {
   const getCategoryIcon = (category) => {
     switch (category) {
-      case 'Machine Learning and AI': return <Cpu size={20} color="#c084fc" />;
+      case 'Machine Learning and AI': return <Cpu size={20} color="#60a5fa" />;
       case 'Analytics and Visualization': return <BarChart3 size={20} color="#fbbf24" />;
-      case 'Cloud and Data Engineering': return <Database size={20} color="#a855f7" />;
+      case 'Cloud and Data Engineering': return <Database size={20} color="#3b82f6" />;
       case 'Databases': return <Database size={20} color="#38bdf8" />;
       case 'Creative Tools': return <Palette size={20} color="#f472b6" />;
       case 'Languages': return <Languages size={20} color="#34d399" />;
       case 'Programming and Data Processing': return <Code size={20} color="#34d399" />;
-      default: return <Terminal size={20} color="#c084fc" />;
+      default: return <Terminal size={20} color="#60a5fa" />;
     }
   };
 

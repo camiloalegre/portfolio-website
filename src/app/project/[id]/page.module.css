@@ -58,8 +58,8 @@
   place-items: center;
   background:
     radial-gradient(ellipse at 72% 30%, rgba(56, 189, 248, 0.24), transparent 32%),
-    radial-gradient(ellipse at 24% 78%, rgba(168, 85, 247, 0.24), transparent 36%),
-    linear-gradient(135deg, #100b25, #151c38 55%, #0b1020);
+    radial-gradient(ellipse at 24% 78%, rgba(37, 99, 235, 0.28), transparent 36%),
+    linear-gradient(135deg, #081426, #102343 55%, #050b16);
 }
 
 .coverFallback span {

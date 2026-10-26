@@ -12,7 +12,7 @@
   bottom: 0;
   left: 7px;
   width: 2px;
-  background: linear-gradient(180deg, var(--accent-purple) 0%, var(--accent-violet) 50%, transparent 100%);
+  background: linear-gradient(180deg, #2563eb 0%, var(--accent-violet) 50%, transparent 100%);
 }
 
 .timelineItem {
@@ -90,10 +90,10 @@
   font-size: 0.85rem;
   font-family: var(--font-mono);
   color: var(--accent-lilac);
-  background: rgba(139, 92, 246, 0.12);
+  background: rgba(59, 130, 246, 0.12);
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.25);
   display: inline-block;
   margin-bottom: 0.25rem;
 }
@@ -140,7 +140,7 @@
   flex-wrap: wrap;
   gap: 0.45rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(139, 92, 246, 0.12);
+  border-top: 1px solid rgba(59, 130, 246, 0.14);
 }
 
 .skillsLabel {

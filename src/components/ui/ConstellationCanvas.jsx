@@ -35,7 +35,7 @@ export default function ConstellationCanvas() {
         vx: ((Math.random() - 0.5) * 1.5) / mass,
         vy: ((Math.random() - 0.5) * 1.5) / mass,
         radius: Math.random() * 2 + 1,
-        color: i % 3 === 0 ? 'rgba(192, 132, 252, 0.9)' : 'rgba(139, 92, 246, 0.8)',
+        color: i % 3 === 0 ? 'rgba(147, 197, 253, 0.9)' : 'rgba(59, 130, 246, 0.8)',
         mass: mass
       });
     }
@@ -84,7 +84,7 @@ export default function ConstellationCanvas() {
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
         ctx.shadowBlur = 10;
-        ctx.shadowColor = 'rgba(168, 85, 247, 1)';
+        ctx.shadowColor = 'rgba(59, 130, 246, 0.9)';
         ctx.fill();
         ctx.shadowBlur = 0; // reset
       }
@@ -104,7 +104,7 @@ export default function ConstellationCanvas() {
             ctx.beginPath();
             ctx.moveTo(pi.x, pi.y);
             ctx.lineTo(pj.x, pj.y);
-            ctx.strokeStyle = `rgba(168, 85, 247, ${alpha})`;
+            ctx.strokeStyle = `rgba(59, 130, 246, ${alpha})`;
             ctx.lineWidth = 0.75;
             ctx.stroke();
           }

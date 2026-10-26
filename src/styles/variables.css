@@ -1,44 +1,44 @@
 :root {
-  /* Color Palette - The Data Observatory (Cosmic Violet Edition) */
-  --bg-primary: #070510;
-  --bg-secondary: #0d091e;
-  --bg-surface: #130e2a;
-  --bg-surface-raised: #1c153d;
-  --bg-surface-glass: rgba(19, 14, 42, 0.75);
-  --bg-card: rgba(22, 16, 48, 0.65);
-  --bg-card-hover: rgba(32, 23, 70, 0.8);
+  /* Color palette - deep blue to complement the profile portrait */
+  --bg-primary: #050b16;
+  --bg-secondary: #081426;
+  --bg-surface: #0b1930;
+  --bg-surface-raised: #102343;
+  --bg-surface-glass: rgba(8, 20, 38, 0.82);
+  --bg-card: rgba(11, 25, 48, 0.76);
+  --bg-card-hover: rgba(16, 35, 67, 0.9);
 
   /* Accents */
-  --accent-violet: #8b5cf6;
-  --accent-violet-rgb: 139, 92, 246;
-  --accent-purple: #a855f7;
-  --accent-purple-rgb: 168, 85, 247;
-  --accent-lilac: #c084fc;
-  --accent-indigo: #6366f1;
-  --accent-fuchsia: #d946ef;
+  --accent-violet: #3b82f6;
+  --accent-violet-rgb: 59, 130, 246;
+  --accent-purple: #2563eb;
+  --accent-purple-rgb: 37, 99, 235;
+  --accent-lilac: #93c5fd;
+  --accent-indigo: #1d4ed8;
+  --accent-fuchsia: #60a5fa;
   --accent-cyan: #38bdf8;
   --accent-emerald: #10b981;
 
   /* Glows and Gradients */
-  --glow-violet: 0 0 25px rgba(139, 92, 246, 0.35);
-  --glow-violet-subtle: 0 0 15px rgba(139, 92, 246, 0.2);
-  --glow-purple-strong: 0 0 35px rgba(168, 85, 247, 0.45);
-  --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #ec4899 100%);
-  --gradient-card: linear-gradient(180deg, rgba(28, 21, 61, 0.8) 0%, rgba(15, 10, 33, 0.9) 100%);
-  --gradient-hero-title: linear-gradient(135deg, #ffffff 20%, #c4b5fd 60%, #a855f7 100%);
-  --gradient-tag: linear-gradient(90deg, rgba(139, 92, 246, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+  --glow-violet: 0 0 25px rgba(59, 130, 246, 0.3);
+  --glow-violet-subtle: 0 0 15px rgba(59, 130, 246, 0.16);
+  --glow-purple-strong: 0 0 35px rgba(37, 99, 235, 0.32);
+  --gradient-accent: linear-gradient(135deg, #2563eb 0%, #3b82f6 55%, #60a5fa 100%);
+  --gradient-card: linear-gradient(180deg, rgba(16, 35, 67, 0.82) 0%, rgba(8, 20, 38, 0.94) 100%);
+  --gradient-hero-title: linear-gradient(135deg, #ffffff 20%, #bfdbfe 62%, #60a5fa 100%);
+  --gradient-tag: linear-gradient(90deg, rgba(59, 130, 246, 0.15) 0%, rgba(37, 99, 235, 0.15) 100%);
 
   /* Text Colors */
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
   --text-faint: #64748b;
-  --text-violet: #ddd6fe;
+  --text-violet: #dbeafe;
 
   /* Borders */
-  --border-subtle: rgba(139, 92, 246, 0.18);
-  --border-medium: rgba(139, 92, 246, 0.32);
-  --border-bright: rgba(192, 132, 252, 0.6);
+  --border-subtle: rgba(96, 165, 250, 0.16);
+  --border-medium: rgba(96, 165, 250, 0.3);
+  --border-bright: rgba(147, 197, 253, 0.62);
 
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;

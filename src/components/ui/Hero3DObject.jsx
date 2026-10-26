@@ -227,7 +227,7 @@ export default function Hero3DObject() {
             />
           </bufferGeometry>
           <lineBasicMaterial
-            color="#8b5cf6" // Synapse Violet
+            color="#60a5fa" // Synapse blue
             transparent
             opacity={0.15}
             blending={THREE.AdditiveBlending}

@@ -33,7 +33,7 @@ function TransitionCore() {
         <icosahedronGeometry args={[5, 1]} />
         <meshBasicMaterial 
           ref={materialRef}
-          color="#8b5cf6" 
+          color="#3b82f6"
           wireframe 
           transparent 
           opacity={0}
