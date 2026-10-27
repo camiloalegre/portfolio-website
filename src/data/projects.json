@@ -12,7 +12,7 @@
     "metrics": [],
     "tags": [
       "Python",
-      "pandas",
+      "Pandas",
       "BigQuery",
       "Google Cloud",
       "Docker"
@@ -23,6 +23,7 @@
       "url": "https://github.com/camiloalegre/investment_pipeline"
     },
     "externalLinks": [],
+    "image": "/images/projects/Investment_Pipeline_GCP.png",
     "extensive_data": {
       "pipeline": "Implemented capabilities include:\n\n- REST API integration and automated data ingestion.\n- ETL processing and transformation with Python and pandas.\n- Incremental loading based on the latest available date.\n- Data-quality validation and rejected-record handling.\n- BigQuery warehousing with partitioning and clustering.\n- Docker containerization for reproducible execution.\n- Cloud Run Jobs and Cloud Scheduler configuration for batch processing and scheduling.\n- Environment-based configuration and cloud-managed authentication.\n\nThe project repository contains the implementation; deployment and current execution of cloud infrastructure are not asserted."
     }
@@ -55,6 +56,7 @@
         "url": "https://github.com/camiloalegre/EVENT_SALUD"
       }
     ],
+    "image": "/images/projects/Health_Analysis_Peru.jpg",
     "extensive_data": {
       "insights": "This project analyzes data from 2024:\n\n- Examines regional disparities in healthcare professionals and hospital bed availability.\n- Reviews the distribution of critical events across EsSalud and regional governments.\n- Compares mortality figures with regional population levels to identify potential disparities.\n\nThe analysis is historical and descriptive; it does not assert causal conclusions or represent current statistics."
     }
@@ -86,6 +88,7 @@
         "url": "https://www.kaggle.com/code/camiloalegre/ibuprofen-price-analysis-in-peru-s-private-sector"
       }
     ],
+    "image": "/images/projects/Ibuprofeno_Peru.png",
     "extensive_data": {
       "insights": "Explores ibuprofen price differences by manufacturer and geographic region in Peru's private healthcare sector. No numerical findings or broader conclusions are asserted here."
     }

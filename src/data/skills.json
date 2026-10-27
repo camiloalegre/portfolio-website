@@ -5,10 +5,14 @@
     "skills": [
       { "name": "Python", "highlight": true },
       { "name": "SQL", "highlight": true },
-      { "name": "Git", "highlight": false },
-      { "name": "Google Colab", "highlight": false },
-      { "name": "Jupyter Notebook", "highlight": false },
-      { "name": "pandas", "highlight": false }
+      { "name": "Git", "highlight": true },
+      { "name": "Visual Studio Code", "highlight": true },
+      { "name": "Google Colab", "highlight": true },
+      { "name": "Jupyter Notebook", "highlight": true },
+      { "name": "Pandas", "highlight": true },
+      { "name": "NumPy", "highlight": true },
+      { "name": "Matplotlib", "highlight": true },
+      { "name": "Seaborn", "highlight": true }
     ]
   },
   {
@@ -18,13 +22,13 @@
       { "name": "Google Cloud Platform (GCP)", "highlight": true },
       { "name": "BigQuery", "highlight": true },
       { "name": "ETL and data pipeline automation", "highlight": true },
-      { "name": "REST API integration", "highlight": false },
-      { "name": "Data warehousing", "highlight": false },
-      { "name": "Data modeling", "highlight": false },
-      { "name": "Docker", "highlight": false },
-      { "name": "Cloud Run Jobs", "highlight": false },
-      { "name": "Cloud Scheduler", "highlight": false },
-      { "name": "Airflow", "highlight": false }
+      { "name": "REST API integration", "highlight": true },
+      { "name": "Data warehousing", "highlight": true },
+      { "name": "Data modeling", "highlight": true },
+      { "name": "Docker", "highlight": true },
+      { "name": "Cloud Run Jobs", "highlight": true },
+      { "name": "Cloud Scheduler", "highlight": true },
+      { "name": "Airflow", "highlight": true }
     ]
   },
   {
@@ -52,6 +56,7 @@
     "description": "Relational and cloud data stores used in analytical workflows.",
     "skills": [
       { "name": "Google BigQuery", "highlight": true },
+      { "name": "PostgreSQL", "highlight": true },
       { "name": "MySQL", "highlight": false },
       { "name": "SQLite", "highlight": false }
     ]
@@ -60,12 +65,10 @@
     "category": "Creative Tools",
     "description": "Digital illustration, design, and creative software.",
     "skills": [
-      { "name": "Adobe Photoshop", "highlight": false },
-      { "name": "Clip Studio Paint", "highlight": false },
-      { "name": "ZBrush", "highlight": false },
-      { "name": "Blender", "highlight": false },
-      { "name": "Canva", "highlight": false },
-      { "name": "Figma", "highlight": false }
+      { "name": "Adobe Photoshop", "highlight": true },
+      { "name": "Clip Studio Paint", "highlight": true },
+      { "name": "ZBrush", "highlight": true },
+      { "name": "Blender", "highlight": true }
     ]
   },
   {

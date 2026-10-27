@@ -17,7 +17,7 @@ const Hero3DObject = dynamic(() => import('../ui/Hero3DObject'), { ssr: false })
 const ConstellationCanvas = dynamic(() => import('../ui/ConstellationCanvas'), { ssr: false });
 
 const ROLES = [
-  'Investment Analytics',
+  'Data Analyst',
   'Data Engineering',
   'Machine Learning',
 ];

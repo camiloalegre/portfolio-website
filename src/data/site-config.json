@@ -1,7 +1,7 @@
 {
   "name": "Camilo Alegre Huaman",
-  "role": "Data Analyst | Investment Analytics | Python, SQL | Google Cloud (GCP), BigQuery | Power BI, Looker Studio",
-  "title": "Camilo Alegre Huaman | Data Analyst & Investment Analytics",
+  "role": "Data Analyst | Data Engineer | Python, SQL | Google Cloud (GCP), BigQuery | Power BI, Looker Studio",
+  "title": "Camilo Alegre Huaman | Data Analyst & Data Engineer",
   "description": "Portfolio of Camilo Alegre Huaman, an Industrial Engineer and Data Analyst focused on investment analytics, data engineering, Google Cloud Platform, BigQuery, and Machine Learning.",
   "location": "Lima, Peru",
   "email": "camiloalegre11@gmail.com",
@@ -10,7 +10,7 @@
   "stats": [
     { "label": "Experience", "value": "3+ Years", "sub": "Analytics & data solutions" },
     { "label": "Dashboard Reach", "value": "11+ Clients", "sub": "Looker Studio projects" },
-    { "label": "Department Value", "value": "~45%", "sub": "Value capture contribution" },
+    { "label": "Department Value", "value": "~25%", "sub": "Value capture contribution" },
     { "label": "Academic Standing", "value": "Top Third", "sub": "Industrial Engineering" }
   ],
   "tagline": "Turning data into clear insights for investment and business decisions.",
