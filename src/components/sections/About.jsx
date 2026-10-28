@@ -47,22 +47,24 @@ export default function About() {
             <div className={styles.narrative}>
               <p>
                 I am an <strong>Industrial Engineer and Data Analyst</strong> based in Lima, Peru,
-                interested in investment analytics and using data to support practical business decisions.
-                My work combines analytical problem-solving with experience in reporting, cost control,
-                quality processes, and data preparation.
+                focused on <strong>Data Engineering and AI-driven solutions</strong>.
               </p>
 
               <p>
-                I build data workflows and analytical solutions with <strong>Python, SQL, BigQuery,
-                and Google Cloud Platform</strong>, and create dashboards in Power BI and Looker Studio.
-                I am also interested in applying <strong>Machine Learning</strong> to predictive analytics
-                and investment-focused questions.
+                My experience involves transforming raw data into reliable, actionable insights to support
+                business decision-making. I work with <strong>Python, SQL, and Google Cloud Platform (GCP) </strong> 
+                to build ETL workflows, integrate and validate data, and automate data processes. I also develop
+                and maintain interactive dashboards and reports using <strong>Looker Studio and Power BI</strong>,
+                enabling performance monitoring and data-driven decisions.
               </p>
 
               <p>
-                I hold a degree in <strong>Industrial Engineering</strong> from Universidad César Vallejo,
-                where I received a PRONABEC scholarship and graduated in the top third of my class.
+                Building on this experience, I am expanding my expertise in
+                <strong>Data Engineering, Artificial Intelligence, Large Language Models (LLMs), and Machine Learning</strong>.
+                My goal is to build scalable data pipelines and intelligent systems that connect reliable data
+                infrastructure with practical AI applications.
               </p>
+
             </div>
 
             <div className={styles.statsGrid}>

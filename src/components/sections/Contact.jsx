@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { Mail, MapPin, Phone, Send, MessageSquare, CheckCircle, AlertCircle, Loader2, Link as LinkIcon, CheckCircle2 } from 'lucide-react';
 import { LinkedinIcon } from '../ui/Icons';
 import siteConfig from '../../data/site-config.json';
@@ -13,11 +13,12 @@ import DataCore3D from '../ui/DataCore3D';
  * 
  * Renders the communication hub of the portfolio, featuring direct contact details 
  * and an interactive form. Form submissions are processed securely via a Next.js 
- * API route (`/api/contact`), pushing directly into a Supabase PostgreSQL database.
+ * API route (`/api/contact`), which emails the message and optionally stores it in Supabase.
  * 
  * @returns {JSX.Element} The Contact section
  */
 export default function Contact() {
+  const idempotencyKey = useRef(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,6 +29,7 @@ export default function Contact() {
   const [status, setStatus] = useState({ state: 'idle', message: '' });
 
   const handleChange = (e) => {
+    idempotencyKey.current = null;
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -40,11 +42,16 @@ export default function Contact() {
     }
 
     setStatus({ state: 'loading', message: 'Sending your message...' });
+    const submissionKey = idempotencyKey.current || crypto.randomUUID();
+    idempotencyKey.current = submissionKey;
 
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Idempotency-Key': submissionKey,
+        },
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
@@ -66,6 +73,7 @@ export default function Contact() {
           subject: 'Data Analytics / Engineering Role',
           message: ''
         });
+        idempotencyKey.current = null;
       } else {
         throw new Error(result.error || 'Submission failed');
       }
@@ -123,20 +131,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {siteConfig.phone && (
-                  <div className={styles.detailCard}>
-                    <div className={styles.detailIcon}>
-                      <Phone size={20} />
-                    </div>
-                    <div className={styles.detailText}>
-                      <div className={styles.detailLabel}>Phone</div>
-                      <a href={`tel:${siteConfig.phone.replaceAll(' ', '')}`} className={styles.detailValue}>
-                        {siteConfig.phone}
-                      </a>
-                    </div>
-                  </div>
-                )}
-
                 <div className={styles.detailCard}>
                   <div className={styles.detailIcon}>
                     <MapPin size={20} />
@@ -181,7 +175,7 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="e.g. Sarah Jenkins"
+                    placeholder="e.g. Camilo Alegre"
                     className={styles.input}
                     required
                   />
@@ -195,7 +189,7 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="e.g. s.jenkins@enterprise.com"
+                    placeholder="e.g. c.alegre@enterprise.com"
                     className={styles.input}
                     required
                   />

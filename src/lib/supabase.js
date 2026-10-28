@@ -13,23 +13,13 @@ if (supabaseUrl && supabaseAnonKey && supabaseUrl.startsWith('http') && !supabas
   }
 }
 
-/**
- * Safe Supabase submission wrapper with offline/fallback resilience.
- */
 export async function submitContactForm(payload) {
-  if (client) {
-    try {
-      const { data, error } = await client.from('contacts').insert([payload]);
-      if (error) throw error;
-      return { success: true, data };
-    } catch (err) {
-      console.warn('Supabase insert failed, falling back to simulated success:', err.message);
-    }
-  }
+  if (!client) return { stored: false };
 
-  // Fallback response for environments without active Supabase credentials
-  console.log('Contact form submission (Mock/Logged):', payload);
-  return { success: true, simulated: true };
+  const { error } = await client.from('contacts').insert([payload]);
+  if (error) throw error;
+
+  return { stored: true };
 }
 
 export default client;

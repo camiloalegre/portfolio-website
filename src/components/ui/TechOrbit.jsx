@@ -5,13 +5,13 @@ import { Database, Code2, LineChart, Cpu, Cloud, Settings, Layers, BrainCircuit 
 import styles from '../../styles/techorbit.module.css';
 
 const TECH_ITEMS = [
-  { icon: <Code2 size={30} />, name: "Python", color: "#38bdf8" },
+  { icon: <Code2 size={30} />, name: "Python", color: "#2d23b8" },
   { icon: <Database size={30} />, name: "SQL", color: "#60a5fa" },
   { icon: <LineChart size={30} />, name: "Power BI", color: "#f59e0b" },
-  { icon: <Cpu size={30} />, name: "Scikit-Learn", color: "#f472b6" },
-  { icon: <Cloud size={30} />, name: "Statistics", color: "#fb923c" },
+  { icon: <Cpu size={30} />, name: "Scikit-Learn", color: "#fb3c3cb" },
+  { icon: <Cloud size={30} />, name: "Google Cloud Platform", color: "#f8fb3c" },
   { icon: <BrainCircuit size={30} />, name: "Machine Learning", color: "#34d399" },
-  { icon: <Layers size={30} />, name: "Tableau", color: "#e879f9" },
+  { icon: <Layers size={30} />, name: "Data Studio", color: "#2b8eff" },
   { icon: <Settings size={30} />, name: "ETL", color: "#94a3b8" }
 ];
 
