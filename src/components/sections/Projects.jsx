@@ -9,9 +9,8 @@ import FadeIn from '../ui/FadeIn';
 
 const CATEGORIES = [
   'All',
-  'Investment Analytics',
-  'Health Analytics',
-  'Price Analysis'
+  'Data Pipeline',
+  'Exploratory Data Analysis',
 ];
 
 export default function Projects() {

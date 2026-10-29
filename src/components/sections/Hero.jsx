@@ -98,9 +98,15 @@ export default function Hero() {
             <span className={styles.roleDynamic}>{displayedText}</span>
           </div>
 
+          
           <p className={styles.lead}>
-          Industrial Engineer with <span className={styles.leadHighlight}>3+ years of experience</span> building data-driven solutions on Google Cloud Platform (GCP), automating ETL pipelines, integrating APIs, and modeling data in BigQuery. Skilled in <span className={styles.leadHighlight}>Machine Learning</span> for predictive analytics, transforming raw data into actionable insights that support business decision-making.
+            Industrial Engineer and Data Analyst with <span className={styles.leadHighlight}>3+ years of experience</span> building data solutions with Python, SQL, and GCP. Focused on ETL automation, BigQuery, and Machine Learning to turn data into actionable insights.
           </p>
+          <p className={styles.lead}>
+            Outside of work, I am a <span className={styles.leadHighlight}>digital artist</span>, combining creativity and analytical thinking to bring ideas and data to life.
+          </p>
+
+
 
           <div className={styles.ctaGroup}>
             <Link href="#projects" className="btnPrimary">

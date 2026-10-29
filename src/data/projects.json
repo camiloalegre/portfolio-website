@@ -5,7 +5,7 @@
     "subtitle": "Python & Google Cloud",
     "tier": 1,
     "featured": true,
-    "category": "Investment Analytics",
+    "category": "Data Pipeline",
     "summary": "An end-to-end data pipeline for ingesting, transforming, validating, and incrementally loading daily financial market data from a REST API into BigQuery.",
     "problem": "Daily financial market data needs a repeatable path from a REST API into an analytical warehouse, with data quality checks and incremental updates.",
     "solution": "Implemented a Python and pandas ETL workflow with validation and rejected-record handling, incremental BigQuery loads, and cloud batch scheduling configuration. Cloud infrastructure deployment or active execution is not claimed.",
@@ -25,8 +25,9 @@
     "externalLinks": [],
     "image": "/images/projects/Investment_Pipeline_GCP.png",
     "extensive_data": {
-      "pipeline": "Implemented capabilities include:\n\n- REST API integration and automated data ingestion.\n- ETL processing and transformation with Python and pandas.\n- Incremental loading based on the latest available date.\n- Data-quality validation and rejected-record handling.\n- BigQuery warehousing with partitioning and clustering.\n- Docker containerization for reproducible execution.\n- Cloud Run Jobs and Cloud Scheduler configuration for batch processing and scheduling.\n- Environment-based configuration and cloud-managed authentication.\n\nThe project repository contains the implementation; deployment and current execution of cloud infrastructure are not asserted."
+      "insights": "Investment Pipeline is a Python-based ETL project that collects, transforms, validates, and loads daily stock market data from the Alpha Vantage API.\n\n- **Data extraction:** Retrieves daily stock prices for configurable financial symbols through a REST API and preserves the original responses in JSON format.\n- **Data transformation:** Uses pandas to normalize dates, convert numerical values, structure financial records, and add ingestion timestamps.\n- **Incremental loading:** Queries the latest stored date for each symbol in BigQuery and filters previously loaded records to reduce redundant processing.\n- **Data quality:** Validates required columns, null values, duplicates, numerical types, and date formats. Separates valid and rejected records and generates CSV files and a JSON quality report.\n- **Cloud data warehouse:** Supports loading processed records into Google BigQuery, with daily partitioning by date, clustering by symbol, and configurable write disposition.\n- **Flexible output:** Supports CSV-only, BigQuery-only, or combined output through the LOAD_TARGET configuration.\n- **API reliability:** Handles HTTP errors and Alpha Vantage error messages, retries rate-limit exceptions, and introduces delays between symbol requests.\n- **Containerization:** Includes a Dockerfile for packaging the pipeline as a batch application, with environment-based configuration and support for external Google Cloud credentials.\n- **Google Cloud readiness:** Uses BigQuery and Application Default Credentials. The repository is compatible with a potential Cloud Run Jobs deployment, but does not include verified infrastructure configuration for Cloud Run Jobs, Artifact Registry, or Cloud Scheduler.\n- **Security:** Keeps API keys and credentials outside the application image and excludes environment files, credentials, and generated data through Git and Docker ignore rules.\n\nThe project demonstrates practical skills in Python ETL development, financial API integration, pandas transformations, incremental data processing, data quality validation, BigQuery modeling, SQL, Docker, and Google Cloud authentication.\n\nCurrent limitations include the absence of implemented automated tests, automatic duplicate removal, advanced financial validation rules, exponential backoff, monitoring, alerting, CI/CD, and verified scheduled execution. These are identified as potential improvements rather than completed features.\n\nThe pipeline provides a foundation for building historical financial datasets for market analysis and investment research. It demonstrates data engineering capabilities relevant to Data Analyst, Data Engineer, and Analytics Engineer roles without claiming investment recommendations or predictive performance."
     }
+
   },
   {
     "id": "health-analysis-peru",
@@ -34,7 +35,7 @@
     "subtitle": "Resources and Events Under Surveillance 2024",
     "tier": 1,
     "featured": true,
-    "category": "Health Analytics",
+    "category": "Exploratory Data Analysis",
     "summary": "An analysis of the distribution of healthcare professionals, infrastructure, and monitored events in Peru during 2024.",
     "problem": "The project explores how healthcare resources and monitored events were distributed across Peru during 2024.",
     "solution": "Analyzed regional variation in healthcare professionals and hospital beds, compared critical events across EsSalud and regional governments, and examined mortality figures alongside regional population levels. These comparisons describe observed patterns and do not establish causality.",
@@ -67,7 +68,7 @@
     "subtitle": "Peru's Private Healthcare Sector",
     "tier": 1,
     "featured": true,
-    "category": "Price Analysis",
+    "category":"Exploratory Data Analysis",
     "summary": "An analysis of ibuprofen price variation across manufacturers and regions in Peru's private healthcare sector.",
     "problem": "Ibuprofen prices may vary across manufacturers and geographic regions within the private healthcare sector.",
     "solution": "Explored price differences by manufacturer and geographic region using the analysis published on LinkedIn and Kaggle.",
