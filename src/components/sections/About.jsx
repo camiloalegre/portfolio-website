@@ -59,8 +59,7 @@ export default function About() {
               </p>
 
               <p>
-                Building on this experience, I am expanding my expertise in
-                <strong>Data Engineering, Artificial Intelligence, Large Language Models (LLMs), and Machine Learning</strong>.
+                Building on this experience, I am expanding my expertise in <strong> Data Engineering, Artificial Intelligence, Large Language Models (LLMs), and Machine Learning</strong>.
                 My goal is to build scalable data pipelines and intelligent systems that connect reliable data
                 infrastructure with practical AI applications.
               </p>
