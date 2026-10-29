@@ -97,16 +97,12 @@ export default function Hero() {
             <span className={styles.rolePrefix}>Specializing in</span>
             <span className={styles.roleDynamic}>{displayedText}</span>
           </div>
-
           
           <p className={styles.lead}>
             Industrial Engineer and Data Analyst with <span className={styles.leadHighlight}>3+ years of experience</span> building data solutions with Python, SQL, and GCP. Focused on ETL automation, BigQuery, and Machine Learning to turn data into actionable insights.
-          </p>
-          <p className={styles.lead}>
+            <br />
             Outside of work, I am a <span className={styles.leadHighlight}>digital artist</span>, combining creativity and analytical thinking to bring ideas and data to life.
           </p>
-
-
 
           <div className={styles.ctaGroup}>
             <Link href="#projects" className="btnPrimary">
