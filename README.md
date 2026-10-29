@@ -30,7 +30,7 @@ npm install
 npm run dev
 ```
 
-Open [https://camiloalegre-portfolio.vercel.app]([http://localhost:3000](https://camiloalegre-portfolio.vercel.app)) to view the website.
+Open https://camiloalegre-portfolio.vercel.app to view the site.
 
 ## Contact Form Email
 
