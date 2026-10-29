@@ -34,37 +34,45 @@ Open https://camiloalegre-portfolio.vercel.app to view the site.
 
 ## Contact Form Email
 
-The contact form uses Resend to send messages to the email address configured in `src/data/site-config.json`:
+The contact form submits to the server-side Next.js route at `/api/contact`. The route sends the message with Resend to the email address configured in `src/data/site-config.json`:
 
 `camiloalegre11@gmail.com`
 
-Configure the following server-side environment variables:
+Configure these server-side environment variables:
 
-- `RESEND_API_KEY` — A Resend API key authorized to send emails.
-- `RESEND_FROM_EMAIL` — A sender address authorized by Resend, such as `Portfolio Contact <contact@your-verified-domain.com>`.
+- `RESEND_API_KEY` — Your Resend API key. Keep it private; do not use a `NEXT_PUBLIC_` prefix or commit it to Git.
+- `RESEND_FROM_EMAIL` — The sender address. For example, `Portfolio Contact <contact@your-verified-domain.com>`.
 
-The visitor's email address is used as `Reply-To`, not as the sender.
+The visitor's email address is used as `Reply-To`, not as the sender. Resend must authorize the sender address; the recipient is set by the site's `email` value in `src/data/site-config.json`.
 
 ### Resend Setup
 
 1. Create an account at [Resend](https://resend.com/).
-2. Verify a sending domain and configure the DNS records provided by Resend.
-3. Create an API key and configure `RESEND_API_KEY`.
-4. In Vercel, navigate to **Project Settings → Environment Variables** and add both variables to the appropriate deployment environments.
-5. Redeploy the application to apply the configuration.
+2. For production, add and verify a domain in Resend, then publish the DNS records Resend provides. Use a sender on that verified domain for `RESEND_FROM_EMAIL`.
+3. Create an API key in Resend and set `RESEND_API_KEY`.
+4. For a quick test before verifying a domain, set `RESEND_FROM_EMAIL=onboarding@resend.dev`. Resend restricts this testing sender to the account owner's email address; it is not for sending to arbitrary recipients or production use.
+5. For local development, create `.env.local` in the project root:
 
-For local development, create a `.env.local` file in the project root and add the variables there. Never commit API keys or other secrets to Git.
+   ```dotenv
+   RESEND_API_KEY=re_your_resend_api_key
+   RESEND_FROM_EMAIL=onboarding@resend.dev
+   ```
+
+   Replace the placeholder with your own key. Never commit `.env.local` or share your API key. Restart the development server after changing environment variables.
+6. In Vercel, go to **Project Settings → Environment Variables**, add both variables for the desired deployment environments, and redeploy.
+
+The contact form can only send email when both Resend variables are configured. If they are missing, the API responds that the email service is not configured. Resend errors are returned as a failed submission; the form also provides the site's direct email address as a fallback.
 
 ### Optional Supabase Integration
 
-Supabase can be configured for contact form data storage using:
+Supabase is optional and is only used to store a copy of submitted contact details. Configure:
 
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 
-Create the `contacts` table expected by the existing integration before enabling storage. Keep the table's access policies appropriately configured.
+Create a `contacts` table with columns matching the submitted fields: `name`, `email`, `request_type`, `message`, `source_page`, and `created_at`. Configure Row Level Security so the application can insert submissions without granting public read access.
 
-Email delivery and database storage are separate operations. A successful email submission should not be interpreted as proof that the contact record was stored successfully.
+Email delivery and database storage are separate operations. A successful submission means Resend accepted the email; it does not guarantee that Supabase stored the contact record. Supabase storage failures are logged on the server and do not undo a successfully sent email.
 
 ## Project Structure
 
@@ -77,7 +85,6 @@ portfolio-website/
 │   └── styles/        # Global styles and CSS Modules
 ├── public/
 │   └── images/        # Static images and visual assets
-├── .env.example
 ├── package.json
 └── README.md
 ```
