@@ -12,8 +12,8 @@ import { Canvas } from '@react-three/fiber';
 import { Environment } from '@react-three/drei';
 import FadeIn from '../ui/FadeIn';
 import dynamic from 'next/dynamic';
+import Hero3DObject from '../ui/Hero3DObject';
 
-const Hero3DObject = dynamic(() => import('../ui/Hero3DObject'), { ssr: false });
 const ConstellationCanvas = dynamic(() => import('../ui/ConstellationCanvas'), { ssr: false });
 
 const ROLES = [

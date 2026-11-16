@@ -5,6 +5,7 @@ import ParallaxBackground from '../components/ui/ParallaxBackground';
 import JsonLd from '../components/seo/JsonLd';
 import siteConfig from '../data/site-config.json';
 import { Analytics } from '@vercel/analytics/next';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 export const metadata = {
   title: siteConfig.title,
@@ -66,6 +67,9 @@ export default function RootLayout({ children }) {
         />
         <JsonLd />
       </head>
+
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+
       <body suppressHydrationWarning>
         <ParallaxBackground />
         <Navbar />
