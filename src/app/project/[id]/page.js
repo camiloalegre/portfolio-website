@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import InfographicBackground from '@/components/ui/InfographicBackground';
 import styles from './page.module.css';
+import ProjectViewTracker from '@/components/analytics/ProjectViewTracker';
 
 // Read JSON synchronously for static generation
 function getProjects() {
@@ -51,6 +52,13 @@ export default async function ProjectPage({ params }) {
 
   return (
     <main className={styles.container} style={{ backgroundImage: bgStyle, minHeight: '100vh' }}>
+      <ProjectViewTracker
+        project={{
+          id: project.id,
+          title: project.title,
+          category: project.category,
+        }}
+      />
       <InfographicBackground />
       <Link href="/#projects" className={styles.backLink}>
         ← Back to Observatory
