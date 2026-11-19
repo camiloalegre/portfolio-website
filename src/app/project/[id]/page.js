@@ -8,6 +8,7 @@ import remarkGfm from 'remark-gfm';
 import InfographicBackground from '@/components/ui/InfographicBackground';
 import styles from './page.module.css';
 import ProjectViewTracker from '@/components/analytics/ProjectViewTracker';
+import ProjectExternalLink from '@/components/analytics/ProjectExternalLink';
 
 // Read JSON synchronously for static generation
 function getProjects() {
@@ -177,27 +178,47 @@ export default async function ProjectPage({ params }) {
                 </div>
               </div>
             )}
-
+            
             <div className={styles.links}>
               {project.demo && (
-                <a href={project.demo} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.btnPrimary}`}>
+                <ProjectExternalLink
+                  href={project.demo}
+                  project={project}
+                  className={`${styles.btn} ${styles.btnPrimary}`}
+                >
                   View Live Demo / Viz
-                </a>
+                </ProjectExternalLink>
               )}
+
               {project.primaryLink && (
-                <a href={project.primaryLink.url} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.btnPrimary}`}>
+                <ProjectExternalLink
+                  href={project.primaryLink.url}
+                  project={project}
+                  className={`${styles.btn} ${styles.btnPrimary}`}
+                >
                   {project.primaryLink.label}
-                </a>
+                </ProjectExternalLink>
               )}
+
               {project.externalLinks?.map((link) => (
-                <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.btnSecondary}`}>
+                <ProjectExternalLink
+                  key={link.url}
+                  href={link.url}
+                  project={project}
+                  className={`${styles.btn} ${styles.btnSecondary}`}
+                >
                   {link.label}
-                </a>
+                </ProjectExternalLink>
               ))}
+
               {!project.primaryLink && project.github && (
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className={`${styles.btn} ${styles.btnSecondary}`}>
+                <ProjectExternalLink
+                  href={project.github}
+                  project={project}
+                  className={`${styles.btn} ${styles.btnSecondary}`}
+                >
                   View Source on GitHub
-                </a>
+                </ProjectExternalLink>
               )}
             </div>
           </aside>
